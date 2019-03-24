@@ -8,6 +8,7 @@ here I share some basic command as a get-started-kit, here we go
 Basic Git Command
 
 Status - Init - Pull - Clone Checkout
+
 Check homebrew status first
 brew update
 Git installation using homebrew
@@ -34,7 +35,8 @@ to check if there is any modification
 $ git status 
 
 Add - Commit - Push
- Add modified file from local repos to staging;  after adding, the status will be “Unstage”
+
+Add modified file from local repos to staging;  after adding, the status will be “Unstage”
 $ git add ‘filename’ 
 $ git add -A //stages all changes; is equivalent to git add --all
 $ git add .  //stages new files and modifications, without deletions
@@ -68,6 +70,7 @@ Cách thực hiện: Lấy code từ rebase_branch_name sau đó từ những co
 Merge:
 $ git checkout <branch_name>
  $ git merge <branch_2_name>
+
 Cách thực hiện: git dùng 2 bản commit cuối cùng của từng nhánh rồi tích hợp lại với nhau tạo thành 1 commit mới theo kiểu hình thoi. Thực hiện merge thì các commit đã tồn tại không bị thay đổi, chỉ tạo ra 1 commit mới tích hợp của 2 commit mới nhất.
 Đặc điểm: các commit của 2 nhánh được sắp xếp theo thời gian tạo commit.
 Gộp commit:
@@ -76,7 +79,9 @@ $ git rebase -i <id_commit_end> || $ git rebase -i HEAD~<index>
 <id_commit_end> là id của commit cuối trong nhóm cần gộp.
 <index>: số commit cần gộp. Sau đó, cửa sổ làm việc hiện lên, Ta có các lựa chọn pick|squash|fixup các commit trước khi save.
 Sau đó kiểm tra lại bằng lệnh: $ git log --oneline xem commit đã được gộp thành công hay chưa.
-Git stash:
+ 
+Git stash
+
 Khi đang làm việc với một branch rồi bạn chợt nhận ra mình cần sửa ở branch cũ, bạn sẽ cần checkout và phải commit những thay đổi. Tuy nhiên, bạn chỉ cần lưu nó lại mà chưa commit, và git stash sẽ giúp bạn. Ngoài ra, có 1 số tuỳ chọn như:
 Xem lại lịch sử thay đổi: $ git stash list
 Xem lại lịch sử thay đổi cùng nội dung của nó: $ git stash list -p
