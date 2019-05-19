@@ -1,14 +1,16 @@
 # joe-learns-git
 
+```
 Joe learns git 🐱‍💻📚
 but at first let's learn how to use git to collaborate with others
+thus, I share some basic commands as a get-started-kit.
+Here we go...
+```
+## Basic Git Command
 
-here I share some basic command as a get-started-kit, here we go
+### Status - Init - Pull - Clone Checkout
 
-Basic Git Command
-
-Status - Init - Pull - Clone Checkout
-
+```
 Check homebrew status first
 brew update
 Git installation using homebrew
@@ -33,9 +35,10 @@ $ git clone repo_name //để clone một trong những repo của bạn
 $ git clone username/repo_name //để clone của người khác
 to check if there is any modification
 $ git status 
+```
+### Add - Commit - Push
 
-Add - Commit - Push
-
+```
 Add modified file from local repos to staging;  after adding, the status will be “Unstage”
 $ git add ‘filename’ 
 $ git add -A //stages all changes; is equivalent to git add --all
@@ -51,9 +54,11 @@ Bình thường, việc push một branch ở local lên remote branch được 
 $ git push <remote_name> <branch_name>
 Tuy nhiên việc push dưới một tên khác sẽ có khác biệt, cụ thể: 
 $ git push <remote_name> <local_branch_name>:<remote_branch_name>
+```
 
-Checkout - Merge
+### Checkout - Merge
 
+```
 Kiểm tra danh sách branch: 
 $ git branch //để thực thi trên remote repo, ta chỉ cần cho thêm tùy chọn -r hoặc --remote
 to switch between branch
@@ -79,9 +84,11 @@ $ git rebase -i <id_commit_end> || $ git rebase -i HEAD~<index>
 <id_commit_end> là id của commit cuối trong nhóm cần gộp.
 <index>: số commit cần gộp. Sau đó, cửa sổ làm việc hiện lên, Ta có các lựa chọn pick|squash|fixup các commit trước khi save.
 Sau đó kiểm tra lại bằng lệnh: $ git log --oneline xem commit đã được gộp thành công hay chưa.
+ ```
  
-Git stash
+### Git stash
 
+```
 Khi đang làm việc với một branch rồi bạn chợt nhận ra mình cần sửa ở branch cũ, bạn sẽ cần checkout và phải commit những thay đổi. Tuy nhiên, bạn chỉ cần lưu nó lại mà chưa commit, và git stash sẽ giúp bạn. Ngoài ra, có 1 số tuỳ chọn như:
 Xem lại lịch sử thay đổi: $ git stash list
 Xem lại lịch sử thay đổi cùng nội dung của nó: $ git stash list -p
@@ -90,12 +97,20 @@ Xem lại lịch sử thay đổi cụ thể của lần 1: $ git stash show sta
 Apply thay đổi của lần 1: $ git stash apply stash@{1}
 Xoá thay đổi: $ git stash drop stash@{1}
 Xoá toàn bộ: $ git stash clear
+```
 
-Reset
+### Reset
 
+```
 Trong cuộc sống, mọi hành động thì không thể "hoàn tác" được. Nhưng khi làm việc với máy tính, Ctrl-Z luôn sẵn sàng để sửa chữa sai lầm cho bạn, và git cung cấp cho bạn 3 phương pháp:
 $ git reset <commit_id> // khi ta muốn di chuyển HEAD đến commit reset và giữ nguyên tất cả thay đổi của file đến vị trị hiện tại. Tuy nhiên sẽ loại bỏ thay đổi khỏi stage.
 $ git reset --hard <commit_id> khi nó vẫn di chuyển HEAD đến commit reset nhưng sẽ loại bỏ tất cả thay đổi của file sau commit reset.
 $ git reset --soft <commit_id> khi muốn di chuyển HEAD đến commit reset và có ưu điểm là sẽ giữ nguyên tất cả thay đổi của file và các thay đổi ở stage. 
 Vì vậy reset --soft được khuyến khích sử dụng hơn, tuy vậy, bạn cũng nên tùy chọn phù hợp với hoàn cảnh và mục đích bạn mong muốn.
+```
 
+### Reference
+
+```
+tham khảo các bài viết từ Viblo https://viblo.asia/search?q=git 
+```
