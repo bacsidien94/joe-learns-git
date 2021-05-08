@@ -2,40 +2,53 @@
 
 ```
 Joe learns git 🐱‍💻📚
-but at first let's learn how to use git to collaborate with others
+I think the first step before you go any further, let's learn how to use git, so that you can collaborate with the others, or simply get the sharing code from the others
 thus, I share some basic commands as a get-started-kit.
 Here we go...
 ```
 ## Basic Git Command
 
-### Status - Init - Pull - Clone Checkout
+```
+
+### Installation
 
 ```
-Check homebrew status first
-brew update
+If you are Mac user, you can install git by using homebrew
+Check homebrew status first:
+$  brew update
 Git installation using homebrew
-brew install git 
+$  brew install git 
 Check git version
 $ git --version
-before doing anything, need to navigate to the location of the local repository for example
+
+If you are Windows user, you can install git by using chocolatey
+or download the installation from https://git-scm.com/downloads
+```
+
+###Initialization - Pull - Clone 
+
+```
+Before doing anything, need to navigate to the location of the local repository, it's the folder you are going to use to store your code, for example:
+from your git BASH
 cd /Users/tiengiap/Dropbox/Repository/joe-geek 
-Linux syntax for the terminal can be used, for example, list all files in the current directory
-ls 
+
 Add your Github email and username to git
 $ git config --global user.email "yourGitHub@email.com"
 $ git config --global user.name "your GitHub username"
+
 to create a local repository
-git init  
+$  git init  
 Indicate remote repos which connect to this local repos
-git remote add origin “remote repository path”
+$  git remote add origin “remote repository path”
 to pull from remote repos to local repos
-$ git pull origin master 
-clone
-$ git clone repo_name //để clone một trong những repo của bạn
-$ git clone username/repo_name //để clone của người khác
+$  git pull origin master 
+to clone git folder
+$  git clone repo_name //để clone một trong những repo của bạn
+$  git clone username/repo_name //để clone của người khác
 to check if there is any modification
 $ git status 
 ```
+
 ### Add - Commit - Push
 
 ```
@@ -68,13 +81,13 @@ khi đang ở branch khác: $ git branch -d <branch_name>
 khi đang ở branch cùng tên với remote branch muốn xóa: $ git push <remote_name> -d <branch_name>
 Rebase và merge:
 Rebase:
- $ git checkout <branch_name>
- $ git rebase <rebase_branch_name>
+$ git checkout <branch_name>
+$ git rebase <rebase_branch_name>
 Cách thực hiện: Lấy code từ rebase_branch_name sau đó từ những commit ở đó tạo ra những commit tương tự lên branch_name. Thực hiện rebase thì các commit đã tồn tại bị bỏ đi và tái tạo lại các commit tương tự nhưng thực ra là khác biệt. Điều này làm lịch sử commit ở local và remote khác nhau.
 Đặc điểm: các commit của nhánh được tạo mới sẽ nằm liền mạch, và các commit của rebase-branch sẽ là các commit mới nhất.
 Merge:
 $ git checkout <branch_name>
- $ git merge <branch_2_name>
+$ git merge <branch_2_name>
 
 Cách thực hiện: git dùng 2 bản commit cuối cùng của từng nhánh rồi tích hợp lại với nhau tạo thành 1 commit mới theo kiểu hình thoi. Thực hiện merge thì các commit đã tồn tại không bị thay đổi, chỉ tạo ra 1 commit mới tích hợp của 2 commit mới nhất.
 Đặc điểm: các commit của 2 nhánh được sắp xếp theo thời gian tạo commit.
@@ -112,5 +125,5 @@ Vì vậy reset --soft được khuyến khích sử dụng hơn, tuy vậy, b�
 ### Reference
 
 ```
-tham khảo các bài viết từ Viblo https://viblo.asia/search?q=git 
+Bạn có thể tham khảo thêm các bài viết từ Viblo https://viblo.asia/search?q=git 
 ```
