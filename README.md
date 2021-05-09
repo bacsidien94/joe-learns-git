@@ -1,6 +1,6 @@
 # joe-learns-git
 
-Joe learns git 🐱‍💻📚
+Joe learns git 🐱‍💻>📚>🐱‍👤>🐱‍🏍
 I think the first step before you go any further, let's learn how to use git, so that you can collaborate with the others, or simply get the sharing code from the others
 thus, I share some basic commands as a get-started-kit.
 Here we go...
@@ -40,15 +40,27 @@ Add your Github email and username to git
 $ git config --global user.email "yourGitHub@email.com"
 $ git config --global user.name "your GitHub username"
 ```
-to create a local repository
+to check your global configuaration
+```
+$ git config --global --list
+```
+
+There is several ways you want to start to use git repository:
+1) create a local repository, place your code inside it, keep it tracked and commit to local repository.
+2) you want to publish your local repository to remote repository
+3) pull an existing remote repository to your local, to get the new update by others, and continute to code
+4) clone an existing remote repository and continute to code
+
+Below demonstration is for (3) & (4)
+First, open git BASH from a folder you want to create a local repository
 ```
 $  git init  
 ```
-Indicate remote repos which connect to this local repos
+Indicate remote repository which to sync to this local reposiroy
 ```
 $  git remote add origin “https://github.com/joe-ggg/joe-learns-git.git” 
 ```
-"https://github.com/joe-ggg/joe-learns-git.git" is the location path, note that it has .git at the end
+the url is the git repository path, note that it has .git at the end
  
 to pull from remote repos to local repos
 ```
@@ -56,26 +68,27 @@ $  git pull origin master
 ```
 to clone git folder
 ```
-$  git clone repo_name
+$  git clone <repo_name>
 ```
 To clone others git folder
 ```
-$  git clone username/repo_name 
+$  git clone <username/repo_name>
 ```
 
 ### Add - Commit - Push
 
 Unstaged -> Staged > Pushed
-Add modified file from local repos to staging;  after adding, the status will be “Unstage”
-To check if there is any modification, you should do this before make change to the git repo
+once a new file is added, or an existing file got changes or deletion, those modification call "Untracked".
+After adding, the status will be “Unstaged”.
+So to track those change from local repository, at first let's see the repository status, to check if there is any modification, you should do this before make change to the git repo
 ```
 $ git status 
 ```
-To add new file
+You found some changes and you want to add new file to a local repository
 ```
 $ git add ‘filename’ 
 ```
-if the changes of multiple file, with or withour deletions
+if the changes of multiple file, with or withour deletions, you can do as follow
 ```
 $ git add -A //stages all changes; is equivalent to git add --all
 $ git add .  //stages new files and modifications, without deletions
@@ -86,7 +99,7 @@ to commit a new file to Staging; after commitment, the status will be “Staged�
 ```
 $ git commit -m “put change log description”  
 ```
-to push staged file from staging to the remote repository
+to push staged file from staging local repository to the remote repository
 ```
 $ git push -u origin master
 ```
