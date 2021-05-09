@@ -201,6 +201,7 @@ Vì vậy reset --soft được khuyến khích sử dụng hơn, tuy vậy, b�
 
 Bạn có thể tham khảo thêm các bài viết từ các nguồn sau
 ```
+https://www.youtube.com/watch?v=F2DBSH2VoHQ
 https://topdev.vn/blog/git-la-gi/
 https://viblo.asia/p/tap-hop-nhung-cau-lenh-git-huu-dung-dWrvwWr2vw38
 https://jobs.hybrid-technologies.vn/blog/nhung-lenh-git-co-ban-can-nho/
