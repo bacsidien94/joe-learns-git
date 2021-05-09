@@ -178,10 +178,11 @@ Apply thay đổi của lần 1:
 ```
 $ git stash apply stash@{1}
 ```
-Xoá thay đổi: ```
+Xoá thay đổi
+```
 $ git stash drop stash@{1}
 ```
-Xoá toàn bộ: 
+Xoá toàn bộ
 ```
 $ git stash clear
 ```
@@ -189,20 +190,23 @@ $ git stash clear
 ### Reset
 
 Trong cuộc sống, mọi hành động thì không thể "hoàn tác" được. Nhưng khi làm việc với máy tính, Ctrl-Z luôn sẵn sàng để sửa chữa sai lầm cho bạn, và git cung cấp cho bạn 3 phương pháp:
+
 ```
 $ git reset <commit_id> // khi ta muốn di chuyển HEAD đến commit reset và giữ nguyên tất cả thay đổi của file đến vị trị hiện tại. Tuy nhiên sẽ loại bỏ thay đổi khỏi stage.
 $ git reset --hard <commit_id> khi nó vẫn di chuyển HEAD đến commit reset nhưng sẽ loại bỏ tất cả thay đổi của file sau commit reset.
 $ git reset --soft <commit_id> khi muốn di chuyển HEAD đến commit reset và có ưu điểm là sẽ giữ nguyên tất cả thay đổi của file và các thay đổi ở stage. 
 ```
+
 Vì vậy reset --soft được khuyến khích sử dụng hơn, tuy vậy, bạn cũng nên tùy chọn phù hợp với hoàn cảnh và mục đích bạn mong muốn.
 
 ### Reference
 
-
 Bạn có thể tham khảo thêm các bài viết từ các nguồn sau
+
 ```
 https://www.youtube.com/watch?v=F2DBSH2VoHQ
 https://topdev.vn/blog/git-la-gi/
 https://viblo.asia/p/tap-hop-nhung-cau-lenh-git-huu-dung-dWrvwWr2vw38
 https://jobs.hybrid-technologies.vn/blog/nhung-lenh-git-co-ban-can-nho/
 ```
+EOD
